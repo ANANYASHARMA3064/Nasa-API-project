@@ -32,10 +32,13 @@ console.log("url:",url)
         //✅ Retrieves the stored data from localStorage.
 
         const apidata=JSON.parse(localStorage.getItem(localKey))
+        console.log("data:",apidata)
         setData(apidata)
         console.log('fetched from cache today')
+        
         return
       }
+      
       localStorage.clear()
       try{
         const res=await fetch (url);
